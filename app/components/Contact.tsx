@@ -8,7 +8,9 @@ const Contact = () => {
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending...");
-    const formData = new FormData(event.currentTarget);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
     formData.append("access_key", "5d077bc6-42ea-4d01-8911-54e00b67a202");
 
@@ -21,7 +23,7 @@ const Contact = () => {
 
     if (data.success) {
       setResult("Form Submitted successfully");
-      event.currentTarget.reset();
+      form.reset();
     } else {
       console.log("Error", data);
       setResult(data.message);
