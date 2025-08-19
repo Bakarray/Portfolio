@@ -10,9 +10,12 @@ const Services = () => {
         I am a web developer that provides software solutions for personal and
         commercial use.
       </p>
-      <div className="grid grid-cols-4 gap-6 my-10">
+      <div className="grid grid-cols-(--auto-grid-cols) gap-6 my-10">
         {serviceData.map(({ icon, title, description, link }, index) => (
-          <div key={index}>
+          <div
+            key={index}
+            className="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500"
+          >
             <Image src={icon} alt="" className="w-10" />
             <h3 className="text-lg my-4 text-gray-700">{title}</h3>
             <p className="text-sm text-gray-600 leading-5">{description}</p>
