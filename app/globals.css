@@ -1,5 +1,8 @@
 @import "tailwindcss" important;
 
+/* Toggle dark mode manually */
+@custom-variant dark (&:where(.dark, .dark *));
+
 * {
   font-family: Outfit;
 }
