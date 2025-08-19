@@ -51,7 +51,7 @@ const Header = () => {
         className="max-w-2xl mx-auto font-Ovo"
       >
         I am a software developer from Lagos, Nigeria with 2 years of experience
-        building projects that provide solutions to world problems
+        building web based software solutions to world problems
       </motion.p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
